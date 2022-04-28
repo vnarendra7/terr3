@@ -7,7 +7,7 @@ resource "aws_instance" "webservers" {
 	user_data = "${file("install_httpd.sh")}"
 	key_name = var.key_name
 
-	tags {
+	tags = {
 	  Name = "Server-${count.index}"
 	}
 }

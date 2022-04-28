@@ -7,17 +7,19 @@ variable "vpc_cidr" {
 }
 
 variable "subnets_cidr" {
-	type = "list"
+#	type = "list"
+	type    = list(string)
 	default = ["10.20.1.0/24", "10.20.2.0/24"]
 }
 
 variable "azs" {
-	type = "list"
+#	type = "list"
+ 	type    = list(string)
 	default = ["ap-south-1a", "ap-south-1b"]
 }
 
 variable "webservers_ami" {
-  default = "ami-0447a12f28fddb066"
+  default = "ami-0a3277ffce9146b74"
 }
 
 variable "instance_type" {
@@ -26,5 +28,5 @@ variable "instance_type" {
 
 variable "key_name" {
   description = "key name"
-  default = "Sec_key"
+  default = "kaju"
 }
