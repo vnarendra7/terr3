@@ -1,5 +1,5 @@
 variable "aws_region" {
-	default = "ap-south-1"
+	default = "us-west-1"
 }
 
 variable "vpc_cidr" {
@@ -15,11 +15,11 @@ variable "subnets_cidr" {
 variable "azs" {
 #	type = "list"
  	type    = list(string)
-	default = ["ap-south-1a", "ap-south-1b"]
+	default = ["us-west-1a", "us-west-1c"]
 }
 
 variable "webservers_ami" {
-  default = "ami-0a3277ffce9146b74"
+  default = "ami-018d291ca9ffc002f"
 }
 
 variable "instance_type" {
@@ -28,5 +28,5 @@ variable "instance_type" {
 
 variable "key_name" {
   description = "key name"
-  default = "kaju"
+  default = "ctcdevops"
 }
